@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap');
 
-background-color: #F1F5F4;
-  margin: 0px;
-  padding: 0px;
+body {
+    background-color: #F1F5F4;
+    margin: 0px;
+    padding: 0px;
 }
 
 ul {
