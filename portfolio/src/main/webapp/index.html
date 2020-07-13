@@ -3,16 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <section>
+      <nav>
+        <a href="#" class="name">ANGEL WALIA</a>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="Angel_Walia_Resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="text-container">
+       <p>Hello there,</p>
+       <p>I am Angel!</p>
+       <p>I am a Software Engineer and Designer</p> 
+       <button class="resume-button" onclick="window.open('Angel_Walia_Resume.pdf')">Download My Resume</button>
+      </div>
+    </section>  
+    <div class="about">
+      <div class="about-text">
+        <p><bold>About Me</bold></p>
+        <p>I am a final year undergrad at IIIT Delhi, majoring in Computer Science and Design. My interests lie in interaction design, UX and product management. I have worked extensively in projects involving 3D product design and rapid prototyping. I am nerdy about languages and other than English and Hindi, which are native to me, I have tried my hands on German and Urdu. In my free time, I am usually found reading poetry or playing basketball.</p>
+      </div>
     </div>
   </body>
 </html>
