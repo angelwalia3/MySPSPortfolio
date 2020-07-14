@@ -163,8 +163,7 @@ nav ul li a{
 	width: 100px;
 	margin-top: 10px;
 	outline: none;
-
-}
+ }
 
 .msg-send-button:hover {
 	background-color: rgba(238,171,162,1);
@@ -195,3 +194,15 @@ nav ul li a{
 	position: relative;
 	align-items: left;
 }
+
+.postit{
+	position: absolute;
+	height: auto;
+	width: 10%;
+	display: none;
+	/*top: 25%;*/
+	/*left: 30%;*/
+	/*top: 62%;
+	left: 62%;*/
+}
+

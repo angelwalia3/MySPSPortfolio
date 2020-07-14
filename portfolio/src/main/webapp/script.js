@@ -1,28 +1,33 @@
-// Copyright 2019 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+var turn = 0;
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function postIt(){
+	var imgArray = new Array();
+	for(var i=0; i<imgArray.length; i++){
+		imgArray[i] = new Image();
+	}
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+	imgArray[0] = document.getElementById('p1');
+	imgArray[1] = document.getElementById('p2');
+	imgArray[2] = document.getElementById('p3');
+	imgArray[3] = document.getElementById('p4');
+	imgArray[4] = document.getElementById('p5');
+	imgArray[5] = document.getElementById('p6');
+	imgArray[6] = document.getElementById('p7');
+	imgArray[7] = document.getElementById('p8');
+	imgArray[8] = document.getElementById('p9');
+	imgArray[9] = document.getElementById('p10');
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+	if (turn < 10){
+		imgArray[turn].style.display="block";
+		var top = Math.floor((Math.random() * 62) + 25);
+		var left = Math.floor((Math.random() * 62) + 30);
+		imgArray[turn].style.top=top.toString()+"%";
+		imgArray[turn].style.left=left.toString()+"%";
+		console.log(turn);
+		console.log(top);
+		console.log(left);
+		turn++;
+	}
+
+	
 }
