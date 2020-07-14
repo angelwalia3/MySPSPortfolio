@@ -149,3 +149,49 @@ nav ul li a{
 	background-position: center;
 	padding-top: 60px;
 }
+
+.msg-send-button{
+	padding: 9px 1px 9px;
+	background-color: rgba(238,171,162,0.8);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	width: 100px;
+	margin-top: 10px;
+	outline: none;
+
+}
+
+.msg-send-button:hover {
+	background-color: rgba(238,171,162,1);
+}
+
+.text-field{
+	border: 1px solid #EEABA2;
+	border-radius: 50px;
+	height: 38px;
+	padding-left: 19px;
+	font-family: "Montserrat", sans-serif;
+	outline: none;
+	margin-top: 10px;
+	margin-right: 20px;
+	width: 87%;
+}
+
+.msg-text{
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	color: #1a1a1a;
+	font-size: 20px;
+}
+
+.contact-form{
+	width: 90%;
+	margin: 90px auto 20px auto ;
+	position: relative;
+	align-items: left;
+}
