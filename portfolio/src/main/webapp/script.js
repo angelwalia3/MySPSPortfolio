@@ -1,33 +1,36 @@
 var turn = 0;
+var imgArray = ["images/green.png","images/orange.png","images/yellow.png","images/blue.png"];
 
-function postIt(){
-	var imgArray = new Array();
-	for(var i=0; i<imgArray.length; i++){
-		imgArray[i] = new Image();
-	}
+function addTextOnPostit(text, top, left){
+	var tag = document.createElement("p");
+	var value = document.createTextNode(text);
+	tag.appendChild(value);
+	tag.setAttribute("style", "position:absolute;top:"+(top+2)+"%;left:"+(left+1)+
+					"%;font-family:'Montserrat',sans-serif;height:auto;width:8%;font-size: 15px;word-wrap: break-word;");
+	document.getElementById("board").appendChild(tag);	
+}
 
-	imgArray[0] = document.getElementById('p1');
-	imgArray[1] = document.getElementById('p2');
-	imgArray[2] = document.getElementById('p3');
-	imgArray[3] = document.getElementById('p4');
-	imgArray[4] = document.getElementById('p5');
-	imgArray[5] = document.getElementById('p6');
-	imgArray[6] = document.getElementById('p7');
-	imgArray[7] = document.getElementById('p8');
-	imgArray[8] = document.getElementById('p9');
-	imgArray[9] = document.getElementById('p10');
+function getPostitText(){
+	var msg = document.getElementById("msg").value;
+	msg = msg.substring(0,41);
+	msg = msg + "...";
+	return msg;
+}
 
-	if (turn < 10){
-		imgArray[turn].style.display="block";
-		var top = Math.floor((Math.random() * 37) + 25);
-		var left = Math.floor((Math.random() * 32) + 30);
-		imgArray[turn].style.top=top.toString()+"%";
-		imgArray[turn].style.left=left.toString()+"%";
-		console.log(turn);
-		console.log(top);
-		console.log(left);
-		turn++;
-	}
+function placePostit(){
+	var img = document.createElement("img");
+	img.setAttribute("src", imgArray[turn%4]);
+	var top = Math.floor((Math.random() * 37) + 25);
+	var left = Math.floor((Math.random() * 32) + 30);
+	img.setAttribute("style", "position:absolute;top:"+top+"%;left:"+left+
+					"%;height:auto;width:10%;");
+		document.getElementById("board").appendChild(img);
+	return [top,left];
+}
 
-	
+function postIt(){	
+	var position = placePostit();
+	var postitText = getPostitText();
+	addTextOnPostit(postitText, position[0], position[1]);
+	turn++;	
 }
