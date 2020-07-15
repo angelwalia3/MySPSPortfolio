@@ -19,8 +19,8 @@ function postIt(){
 
 	if (turn < 10){
 		imgArray[turn].style.display="block";
-		var top = Math.floor((Math.random() * 62) + 25);
-		var left = Math.floor((Math.random() * 62) + 30);
+		var top = Math.floor((Math.random() * 37) + 25);
+		var left = Math.floor((Math.random() * 32) + 30);
 		imgArray[turn].style.top=top.toString()+"%";
 		imgArray[turn].style.left=left.toString()+"%";
 		console.log(turn);
