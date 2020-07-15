@@ -36,24 +36,12 @@
       <form class="contact-form">
         <label for="msg" class="msg-text">Leave a Message!</label>
         <br>
-        <input type="text" name="msg" id="msg" class="text-field">
+        <input type="text" name="msg" id="msg" class="text-field" maxlength="1000">
         <button class="msg-send-button" type="button" onclick="
         postIt()">Send</button>
       </form>
-    <div class="board"> 
-      <img src="images/blue.png" class="postit" id="p1">
-      <img src="images/green.png" class="postit" id="p2">
-      <img src="images/orange.png" class="postit" id="p3">
-      <img src="images/yellow.png" class="postit" id="p4">
-      <img src="images/blue.png" class="postit" id="p5">
-      <img src="images/green.png" class="postit" id="p6">
-      <img src="images/orange.png" class="postit" id="p7">
-      <img src="images/yellow.png" class="postit" id="p8">
-      <img src="images/blue.png" class="postit" id="p9">
-      <img src="images/green.png" class="postit" id="p10">
+    <div class="board" id="board"> 
     </div>
-      
-    </div>
-    
+   </div>
   </body>
 </html>
