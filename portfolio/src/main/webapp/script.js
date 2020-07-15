@@ -28,9 +28,24 @@ function placePostit(){
 	return [top,left];
 }
 
+function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "spsportfolio03@gmail.com",
+	Password : "catchrandommails",
+	To : "spsportfolio03@gmail.com",
+	From : "spsportfolio03@gmail.com",
+	Subject : "Message from your protfolio",
+	Body : document.getElementById("msg").value,
+	}).then(
+		message => alert("Message sent successfully!")
+	);
+}
+
 function postIt(){	
 	var position = placePostit();
 	var postitText = getPostitText();
 	addTextOnPostit(postitText, position[0], position[1]);
+	sendEmail();
 	turn++;	
 }
