@@ -206,3 +206,11 @@ nav ul li a{
 	left: 62%;*/
 }
 
+.msg-sub-text{
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	color: #6d6d6d;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
