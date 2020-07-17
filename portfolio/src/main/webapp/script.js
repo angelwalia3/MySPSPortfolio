@@ -49,7 +49,7 @@ function sendEmail(){
 	Password : "catchrandommails",
 	To : "spsportfolio03@gmail.com",
 	From : "spsportfolio03@gmail.com",
-	Subject : "Message from your protfolio",
+	Subject : "Message from your portfolio",
 	Body : document.getElementById("msg").value,
 	}).then(
 		message => alert("Message sent successfully!")
