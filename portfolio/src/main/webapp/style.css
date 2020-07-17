@@ -1,3 +1,5 @@
+/*Please note the onboard postits position specs:top: 25%; left: 30%; top: 62%; left: 62%;*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap');
 
 body {
@@ -138,3 +140,75 @@ nav ul li a{
 	justify-content: center;
 	margin: 0 auto;
 }
+
+.board{
+	width: 100%;
+	height: 100vh;
+	background-image: url("images/board.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	background-position: center;
+	padding-top: 60px;
+}
+
+.msg-send-button{
+	padding: 9px 1px 9px;
+	background-color: rgba(238,171,162,0.8);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	width: 100px;
+	margin-top: 10px;
+	outline: none;
+ }
+
+.msg-send-button:hover {
+	background-color: rgba(238,171,162,1);
+}
+
+.text-field{
+	border: 1px solid #EEABA2;
+	border-radius: 50px;
+	height: 38px;
+	padding-left: 19px;
+	font-family: "Montserrat", sans-serif;
+	outline: none;
+	margin-top: 10px;
+	margin-right: 20px;
+	width: 87%;
+}
+
+.msg-text{
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	color: #1a1a1a;
+	font-size: 20px;
+}
+
+.contact-form{
+	width: 90%;
+	margin: 90px auto 20px auto ;
+	position: relative;
+	align-items: left;
+}
+
+.postit{
+	position: absolute;
+	height: auto;
+	width: 10%;
+	display: none;
+}
+
+.msg-sub-text{
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	color: #6d6d6d;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
