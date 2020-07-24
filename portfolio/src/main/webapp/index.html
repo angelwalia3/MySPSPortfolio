@@ -8,7 +8,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="loadComments()">
     <section>
       <nav>
         <a href="#" class="name">ANGEL WALIA</a>
@@ -44,6 +44,15 @@
       </form>
     <div class="board" id="board"> 
     </div>
+   </div>
+   <div class="contact-form">
+     <p class="msg-text">Post a comment down below!</p>
+     <form method="POST" action="/new-comment">
+      <input type="text" name="title" class="text-field"> 
+      <button class="msg-send-button">Post</button>       
+     </form>
+     <hr>
+     <ul id="comment-list"></ul>
    </div>
   </body>
 </html>

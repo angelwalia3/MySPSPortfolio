@@ -14,19 +14,15 @@
 
 package com.google.sps.servlets;
 
-import java.io.IOException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+public final class Comment {
 
-/** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/data")
-public class DataServlet extends HttpServlet {
+  private final long id;
+  private final String title;
+  private final long timestamp;
 
-  @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
+  public Comment(long id, String title, long timestamp) {
+    this.id = id;
+    this.title = title;
+    this.timestamp = timestamp;
   }
 }
