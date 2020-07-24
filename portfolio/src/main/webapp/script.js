@@ -63,3 +63,35 @@ function postIt(){
 	sendEmail();
 	turn++;	
 }
+
+function loadComments(){
+	fetch('/list-comments').then(response => response.json()).then((comments)=> {
+		const commentListElement = document.getElementById('comment-list');
+		comments.forEach((comment)=>{
+			commentListElement.appendChild(createCommentElement(comment));
+		})
+	});
+}
+
+function createCommentElement(comment){
+	const commentElement = document.createElement('li');
+	commentElement.className = 'comment';
+	const titleElement = document.createElement('span');
+	titleElement.innerText = comment.title;
+	const deleteButtonElement = document.createElement('button');
+	deleteButtonElement.innerText = 'Delete';
+	deleteButtonElement.setAttribute("style", "position: relative; margin: 10px; padding: 10px; background:none ;height: 38px; font-family:'Montserrat', sans-serif; outline: none; border:none; color: #EEABA2;");
+	deleteButtonElement.addEventListener('click',()=>{
+		deleteComment(comment);
+		commentElement.remove();
+	});
+	commentElement.appendChild(titleElement);
+	commentElement.appendChild(deleteButtonElement);
+	return commentElement;
+}
+
+function deleteComment(comment){
+	const params = new URLSearchParams();
+	params.append('id',comment.id);
+	fetch('/delete-comment',{method:'POST',body:params});
+}
