@@ -212,3 +212,14 @@ nav ul li a{
 	margin-top: 20px;
 }
 
+.comment{
+  border: thin solid #EEABA2;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+  width: 80%;
+  height: 38px;
+  align-items: center;
+}
